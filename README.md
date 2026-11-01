@@ -5,9 +5,9 @@
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
 | macOS | macOS 14+, Apple Silicon и Intel | [1.0.0 — DMG и ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/tag/macos/v1.0.0) |
-| Windows | Windows 10/11 x64 | [1.0.0 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.0/Sinergium-Antiblock-1.0.0-Windows-x64-Portable.exe) |
+| Windows | Windows 10/11 x64 | [1.0.1 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.1/Sinergium-Antiblock-1.0.1-Windows-x64-Portable.exe) |
 
-На Windows скачайте и запустите EXE без установки. На Mac установите приложение. Нажмите версию внизу меню для проверки обновлений. Следующие выпуски — 1.0.1, 1.0.2 и далее. С прежней portable 1.0.1 перейдите на новую 1.0.0 один раз вручную: закройте старую копию и запустите новый EXE. Журнал сохранится. Перед установкой приложение проверяет криптографическую подпись обновления.
+На Windows скачайте и запустите EXE без установки. На Mac установите приложение. Нажмите версию внизу меню для проверки обновлений. В Windows 1.0.1 исправлена ошибка «Недопустимый запрос интерфейса» при запуске из некоторых временных папок. Актуальная portable 1.0.0 обновляется через приложение. Со старой линии требуется однократная ручная замена: выберите «Завершить Антиблок» в трее и запустите новый EXE. Журнал сохранится. Перед установкой приложение проверяет криптографическую подпись обновления.
 
 Каналы: `macos/stable` и `windows-portable-v3/stable`. Для тестовых сборок используется соответствующий `beta`. Приложения получают только обновления своей платформы.
 
