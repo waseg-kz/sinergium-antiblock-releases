@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "files": [
+    {
+      "url": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.0/Sinergium-Antiblock-1.0.0-Windows-x64-Portable.exe",
+      "sha512": "++G9cDi5CuowH8MH5xWxk3T01OXNyDxPTa5rRpjpJrFrMJKPeat+PMLKEFeBEj9hwAvbnQ4nJ0vpCumj7cAy3Q==",
+      "size": 114359611
+    }
+  ],
+  "path": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.0/Sinergium-Antiblock-1.0.0-Windows-x64-Portable.exe",
+  "sha512": "++G9cDi5CuowH8MH5xWxk3T01OXNyDxPTa5rRpjpJrFrMJKPeat+PMLKEFeBEj9hwAvbnQ4nJ0vpCumj7cAy3Q==",
+  "releaseDate": "2026-11-01T08:51:08.895Z",
+  "releaseName": "Синергиум.Антиблок 1.0.0",
+  "antiblockPlatform": "windows",
+  "antiblockChannel": "stable",
+  "antiblockProtocol": 2,
+  "antiblockDistribution": "portable",
+  "antiblockPortableGeneration": 3
+}
