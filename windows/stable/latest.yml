@@ -1,16 +1,16 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "files": [
     {
-      "url": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows/v1.1.0/Sinergium-Antiblock-1.1.0-Windows-x64-Setup.exe",
-      "sha512": "0+fiVgye7pZb5E1I98LpzCEPqFesU8nsl4IrSPt/6cWoDYQkZN/fbO+Jv15BqvZ4Yd2yWgO9v4NCubcJz+pM8g==",
-      "size": 110705602
+      "url": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows/v1.2.0/Sinergium-Antiblock-1.2.0-Windows-x64-Setup.exe",
+      "sha512": "7ll5691f/Fd+FFr+ECcuB6KT6v11G6JoaufdSSLtr/vNb1s09Sud4a9/oKXGHTmrRsA9RH9n0lQHkbFMzXa2mg==",
+      "size": 114546465
     }
   ],
-  "path": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows/v1.1.0/Sinergium-Antiblock-1.1.0-Windows-x64-Setup.exe",
-  "sha512": "0+fiVgye7pZb5E1I98LpzCEPqFesU8nsl4IrSPt/6cWoDYQkZN/fbO+Jv15BqvZ4Yd2yWgO9v4NCubcJz+pM8g==",
-  "releaseDate": "2026-10-31T21:13:33.036Z",
-  "releaseName": "Синергиум.Антиблок 1.1.0",
+  "path": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows/v1.2.0/Sinergium-Antiblock-1.2.0-Windows-x64-Setup.exe",
+  "sha512": "7ll5691f/Fd+FFr+ECcuB6KT6v11G6JoaufdSSLtr/vNb1s09Sud4a9/oKXGHTmrRsA9RH9n0lQHkbFMzXa2mg==",
+  "releaseDate": "2026-11-01T00:39:00.497Z",
+  "releaseName": "Синергиум.Антиблок 1.2.0",
   "antiblockPlatform": "windows",
   "antiblockChannel": "stable"
 }
