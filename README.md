@@ -5,11 +5,11 @@
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
 | macOS | macOS 14+, Apple Silicon и Intel | [1.0.0 — DMG и ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/tag/macos/v1.0.0) |
-| Windows | Windows 10/11 x64 | [1.0.0 — установщик EXE](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/tag/windows/v1.0.0) |
+| Windows | Windows 10/11 x64 | [1.0.0 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.0/Sinergium-Antiblock-1.0.0-Windows-x64-Portable.exe) |
 
-Установите приложение, затем нажмите версию внизу меню для проверки обновлений. Следующие выпуски — 1.0.1, 1.0.2 и далее. Перед установкой приложение проверяет криптографическую подпись обновления.
+На Windows скачайте и запустите EXE без установки. На Mac установите приложение. Нажмите версию внизу меню для проверки обновлений. Следующие выпуски — 1.0.1, 1.0.2 и далее. С прежней portable 1.0.1 перейдите на новую 1.0.0 один раз вручную: закройте старую копию и запустите новый EXE. Журнал сохранится. Перед установкой приложение проверяет криптографическую подпись обновления.
 
-Каналы: `macos/stable` и `windows-v2/stable`. Для тестовых сборок используется соответствующий `beta`. Приложения получают только обновления своей платформы.
+Каналы: `macos/stable` и `windows-portable-v3/stable`. Для тестовых сборок используется соответствующий `beta`. Приложения получают только обновления своей платформы.
 
 Пакеты пока без Developer ID/нотарификации Apple и Authenticode Windows; при первой установке возможны предупреждения ОС. Подпись обновлений работает отдельно.
 
