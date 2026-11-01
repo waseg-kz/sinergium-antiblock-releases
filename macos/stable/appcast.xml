@@ -7,16 +7,16 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <description>Обновления Синергиум.Антиблок</description>
     <language>ru</language>
     <item>
-      <title>Синергиум.Антиблок 1.8.0</title>
-      <pubDate>Sat, 31 Oct 2026 21:06:31 GMT</pubDate>
-      <sparkle:version>30</sparkle:version>
-      <sparkle:shortVersionString>1.8.0</sparkle:shortVersionString>
+      <title>Синергиум.Антиблок 1.9.0</title>
+      <pubDate>Sun, 01 Nov 2026 00:38:57 GMT</pubDate>
+      <sparkle:version>31</sparkle:version>
+      <sparkle:shortVersionString>1.9.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description>Обновление приложения. Настройки и журнал IP сохраняются.</description>
-      <enclosure url="https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.8.0/Sinergium-Antiblock-1.8.0-macOS-universal.zip" sparkle:edSignature="E0gRcsWDffGS7xnKHrgAHB3/nCJhKxascrReEyzVW6EMAMX74WJw9zfZpehTL+1ZQUBQPtg0oAE4e1BC5oNLCQ==" length="2872067" type="application/octet-stream"></enclosure>
+      <enclosure url="https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.9.0/Sinergium-Antiblock-1.9.0-macOS-universal.zip" sparkle:edSignature="UWYWEU+NjHNiGSdneqwAFU3g0YX7mmEsxkVOgIm0t7/MRfwvpamskTX2o00lf9qR70DdjK8hSYHWxSqE2MhzDQ==" length="3377410" type="application/octet-stream"></enclosure>
     </item>
   </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 3YoxSxiuWt+mr4OphPEr6ffx2VD7+60cTTHr6SBAacsPgDuPQOCfSx7O/vrJ63zZs4KHwUUlj1SnISYBofKWDw==
+edSignature: ZqWOyr/3uwDvAo96L7YzdJBwQzHsOEyslsLcpclsQdVWEP2UjroBSXBcJ+IwBEQiQ/LsPyY9rhJ8tqOy1SrVBw==
 length: 1477
 -->
