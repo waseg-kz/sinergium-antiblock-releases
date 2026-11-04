@@ -1,16 +1,18 @@
 #!/bin/bash
-# Синергиум.Антиблок: установка проверенного выпуска 1.0.0.
-# Снимает quarantine только с устанавливаемой копии приложения.
+# Клодздец: установка подписанного и нотарифицированного выпуска 1.0.2.
+# Сохраняет quarantine и проверяет решение Gatekeeper перед установкой.
 # Не меняет Gatekeeper, SIP, настройки сети или разрешения пользователя.
 set -euo pipefail
 umask 077
 
-VERSION='1.0.0'
-BUILD='32'
-ZIP_URL='https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.0/Sinergium-Antiblock-1.0.0-macOS-universal.zip'
-ZIP_SHA256='f6f785f2c0b0d6a636eefca387264d9be51d9c4e55ce29c03c679a274a805392'
+VERSION='1.0.2'
+BUILD='33'
+ZIP_URL='https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.2/Sinergium-Antiblock-1.0.2-macOS-universal.zip'
+ZIP_SHA256='58842b409da08d3d041d8fe9d9a6292412df5fd29f9523c7757ac1a181d26b65'
 MIN_OS='14.0'
-APP_NAME='Синергиум.Антиблок.app'
+TEAM_ID='LGH79DQVGP'
+APP_NAME='Клодздец.app'
+LEGACY_APP_NAME='Синергиум.Антиблок.app'
 BUNDLE_ID='local.macsignallab.diagnostic'
 EXECUTABLE='MacSignalLab'
 archive=''
@@ -19,6 +21,7 @@ launch=1
 work=''
 stage=''
 target=''
+previous_target=''
 lock=''
 lock_owned=0
 backup_moved=0
@@ -26,7 +29,7 @@ committed=0
 
 fail() { printf 'Ошибка: %s\n' "$*" >&2; exit 1; }
 usage() {
-  printf '%s\n' 'Установка Синергиум.Антиблок' \
+  printf '%s\n' 'Установка Клодздец' \
     '  --archive PATH       Использовать уже скачанный ZIP этого выпуска' \
     '  --destination PATH   Установить в указанную папку' \
     '  --no-open            Не запускать приложение после установки'
@@ -36,7 +39,7 @@ cleanup() {
   trap - EXIT HUP INT TERM
   keep_stage=0
   if [[ "$backup_moved" == 1 && "$committed" == 0 ]]; then
-    if [[ ! -e "$target" && ! -L "$target" ]] && /bin/mv "$stage/previous.app" "$target"; then
+    if [[ ! -e "$previous_target" && ! -L "$previous_target" ]] && /bin/mv "$stage/previous.app" "$previous_target"; then
       printf '%s\n' 'Прежняя версия восстановлена.' >&2
     else
       keep_stage=1
@@ -71,9 +74,9 @@ case "$(/usr/bin/uname -m)" in arm64|x86_64) ;; *) fail 'Поддерживаю�
 work=$(/usr/bin/mktemp -d /private/tmp/antiblock-download.XXXXXX)
 if [[ -n "$archive" ]]; then
   [[ -f "$archive" && ! -L "$archive" ]] || fail 'ZIP не найден или является символической ссылкой.'
-  /bin/cp "$archive" "$work/package.zip"
+  /usr/bin/ditto --rsrc --extattr --qtn "$archive" "$work/package.zip"
 else
-  printf 'Скачиваю Синергиум.Антиблок %s…\n' "$VERSION"
+  printf 'Скачиваю Клодздец %s…\n' "$VERSION"
   /usr/bin/curl --proto '=https' --proto-redir '=https' --tlsv1.2 \
     --fail --location --retry 3 --connect-timeout 20 --max-time 180 \
     --silent --show-error --output "$work/package.zip" "$ZIP_URL" || fail 'Не удалось скачать приложение. Проверьте интернет и повторите.'
@@ -82,7 +85,7 @@ actual=$(/usr/bin/shasum -a 256 "$work/package.zip")
 actual=${actual%% *}
 [[ "$actual" == "$ZIP_SHA256" ]] || fail 'Контрольная сумма ZIP не совпала. Установка отменена.'
 
-/usr/bin/ditto -x -k "$work/package.zip" "$work/unpacked" || fail 'Не удалось распаковать ZIP.'
+/usr/bin/ditto -x -k --rsrc --extattr --qtn "$work/package.zip" "$work/unpacked" || fail 'Не удалось распаковать ZIP.'
 source_app="$work/unpacked/$APP_NAME"
 [[ -d "$source_app" && ! -L "$source_app" ]] || fail 'В ZIP нет ожидаемого приложения.'
 info="$source_app/Contents/Info.plist"
@@ -90,15 +93,27 @@ info="$source_app/Contents/Info.plist"
 [[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$info")" == "$EXECUTABLE" ]] || fail 'Неверный исполняемый файл.'
 [[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$info")" == "$VERSION" ]] || fail 'Версия приложения не совпала.'
 [[ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$info")" == "$BUILD" ]] || fail 'Номер сборки не совпал.'
-/usr/bin/codesign --verify --deep --strict --all-architectures "$source_app" || fail 'Нарушена целостность подписи приложения.'
+verify_app() {
+  /usr/bin/codesign --verify --deep --strict --all-architectures "$1" || fail 'Нарушена целостность подписи приложения.'
+  signature=$(/usr/bin/codesign --display --verbose=4 "$1" 2>&1) || fail 'Не удалось прочитать подпись разработчика.'
+  /usr/bin/grep -Fx "TeamIdentifier=$TEAM_ID" <<< "$signature" >/dev/null || fail 'Подпись другого разработчика.'
+  /usr/bin/grep -E '^Authority=Developer ID Application: ' <<< "$signature" >/dev/null || fail 'Приложение не подписано Developer ID.'
+  assessment=$(/usr/sbin/spctl --assess --type execute --verbose=4 "$1" 2>&1) || fail 'Gatekeeper не разрешил запуск приложения.'
+  /usr/bin/grep -Fx 'source=Notarized Developer ID' <<< "$assessment" >/dev/null || fail 'Не подтверждена нотарификация Apple.'
+}
+verify_app "$source_app"
 
 if [[ -z "$destination" ]]; then
-  if [[ -e "/Applications/$APP_NAME" && -e "$HOME/Applications/$APP_NAME" ]]; then
+  existing=()
+  for folder in /Applications "$HOME/Applications"; do
+    for name in "$APP_NAME" "$LEGACY_APP_NAME"; do
+      if [[ -e "$folder/$name" || -L "$folder/$name" ]]; then existing+=("$folder/$name"); fi
+    done
+  done
+  if [[ ${#existing[@]} -gt 1 ]]; then
     fail 'Найдены две установки. Укажите нужную папку через --destination.'
-  elif [[ -e "$HOME/Applications/$APP_NAME" ]]; then
-    destination="$HOME/Applications"
-  elif [[ -e "/Applications/$APP_NAME" ]]; then
-    destination='/Applications'
+  elif [[ ${#existing[@]} == 1 ]]; then
+    destination=$(/usr/bin/dirname "${existing[0]}")
   elif [[ -w /Applications ]]; then
     destination='/Applications'
   else
@@ -111,13 +126,19 @@ destination=$(cd -P "$destination" && pwd -P)
 [[ -w "$destination" ]] || fail 'Нет прав на папку установки. Укажите свою папку через --destination.'
 target="$destination/$APP_NAME"
 [[ ! -L "$target" ]] || fail 'Путь приложения является символической ссылкой. Установка отменена.'
+previous_target="$target"
+if [[ -e "$destination/$LEGACY_APP_NAME" || -L "$destination/$LEGACY_APP_NAME" ]]; then
+  [[ ! -e "$target" ]] || fail 'В папке есть старая и новая установки. Уберите лишнюю копию и повторите.'
+  previous_target="$destination/$LEGACY_APP_NAME"
+fi
+[[ ! -L "$previous_target" ]] || fail 'Путь прежнего приложения является символической ссылкой.'
 lock="$destination/.sinergium-antiblock-install.lock"
 /bin/mkdir "$lock" 2>/dev/null || fail 'В этой папке уже идёт установка. Дождитесь её окончания.'
 lock_owned=1
 
-if [[ -e "$target" ]]; then
-  [[ -d "$target" ]] || fail 'Путь приложения занят файлом.'
-  old_info="$target/Contents/Info.plist"
+if [[ -e "$previous_target" ]]; then
+  [[ -d "$previous_target" ]] || fail 'Путь приложения занят файлом.'
+  old_info="$previous_target/Contents/Info.plist"
   old_id=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$old_info" 2>/dev/null) || fail 'Не удалось проверить прежнее приложение.'
   [[ "$old_id" == "$BUNDLE_ID" ]] || fail 'Путь занят другим приложением. Оно не будет заменено.'
   old_build=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$old_info" 2>/dev/null) || fail 'Не удалось проверить номер установленной сборки.'
@@ -127,11 +148,11 @@ fi
 if pids=$(/usr/bin/pgrep -u "$(/usr/bin/id -u)" -x "$EXECUTABLE"); then
   for pid in $pids; do
     if files=$(/usr/sbin/lsof -a -p "$pid" -d txt -Fn 2>/dev/null); then
-      if /usr/bin/grep -Fx "n$target/Contents/MacOS/$EXECUTABLE" <<< "$files" >/dev/null; then
-        fail 'Завершите Антиблок через его меню и повторите установку.'
+      if /usr/bin/grep -Fx "n$previous_target/Contents/MacOS/$EXECUTABLE" <<< "$files" >/dev/null; then
+        fail 'Завершите Клодздец через его меню и повторите установку.'
       fi
     elif kill -0 "$pid" 2>/dev/null; then
-      fail 'Не удалось проверить запущенный Антиблок. Завершите его и повторите установку.'
+      fail 'Не удалось проверить запущенный Клодздец. Завершите его и повторите установку.'
     fi
   done
 else
@@ -141,12 +162,10 @@ fi
 
 stage=$(/usr/bin/mktemp -d "$destination/.antiblock-install.XXXXXX")
 printf 'Устанавливаю %s в %s…\n' "$VERSION" "$destination"
-/usr/bin/ditto --noqtn "$source_app" "$stage/new.app" || fail 'Не удалось подготовить приложение.'
-# Пользователь запускает этот установщик для разрешения именно этой проверенной копии.
-/usr/bin/xattr -dr com.apple.quarantine "$stage/new.app" || fail 'Не удалось снять карантин с устанавливаемой копии.'
-/usr/bin/codesign --verify --deep --strict --all-architectures "$stage/new.app" || fail 'Проверка подготовленного приложения не пройдена.'
-if [[ -e "$target" ]]; then
-  /bin/mv "$target" "$stage/previous.app" || fail 'Не удалось переместить прежнюю версию.'
+/usr/bin/ditto --rsrc --extattr --qtn "$source_app" "$stage/new.app" || fail 'Не удалось подготовить приложение.'
+verify_app "$stage/new.app"
+if [[ -e "$previous_target" ]]; then
+  /bin/mv "$previous_target" "$stage/previous.app" || fail 'Не удалось переместить прежнюю версию.'
   backup_moved=1
 fi
 [[ ! -e "$target" && ! -L "$target" ]] || fail 'Папка приложения изменилась во время установки.'
