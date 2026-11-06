@@ -1,16 +1,16 @@
 {
-  "version": "1.0.4",
+  "version": "1.0.5",
   "files": [
     {
-      "url": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.4/Sinergium-Antiblock-1.0.4-Windows-x64-Portable.exe",
-      "sha512": "ceTRdGSqGhVYhe7CU+pjisrXIqJQ39HnBoNWnGS+HzzZkrO4Uh3jxTcyUu3tZTk/hxHXZOaTJgi/lwg1znSoXQ==",
-      "size": 114692272
+      "url": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.5/Sinergium-Antiblock-1.0.5-Windows-x64-Portable.exe",
+      "sha512": "xBzX+5Tfv7Ugg/xZCaib/giGbVR/cFt1xWze6W21+MxyjF4twDfwaDaEasv5K9mw/3COhPaC6C4U6+jCYoM9BQ==",
+      "size": 114691253
     }
   ],
-  "path": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.4/Sinergium-Antiblock-1.0.4-Windows-x64-Portable.exe",
-  "sha512": "ceTRdGSqGhVYhe7CU+pjisrXIqJQ39HnBoNWnGS+HzzZkrO4Uh3jxTcyUu3tZTk/hxHXZOaTJgi/lwg1znSoXQ==",
-  "releaseDate": "2026-11-05T21:52:56.833Z",
-  "releaseName": "Клодздец 1.0.4",
+  "path": "https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.5/Sinergium-Antiblock-1.0.5-Windows-x64-Portable.exe",
+  "sha512": "xBzX+5Tfv7Ugg/xZCaib/giGbVR/cFt1xWze6W21+MxyjF4twDfwaDaEasv5K9mw/3COhPaC6C4U6+jCYoM9BQ==",
+  "releaseDate": "2026-11-06T08:12:56.724Z",
+  "releaseName": "Клодздец 1.0.5",
   "antiblockPlatform": "windows",
   "antiblockChannel": "stable",
   "antiblockProtocol": 2,
