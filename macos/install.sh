@@ -1,14 +1,14 @@
 #!/bin/bash
-# Клодздец: установка подписанного и нотарифицированного выпуска 1.0.6.
+# Клодздец: установка подписанного и нотарифицированного выпуска 1.0.7.
 # Сохраняет quarantine и проверяет решение Gatekeeper перед установкой.
 # Не меняет Gatekeeper, SIP, настройки сети или разрешения пользователя.
 set -euo pipefail
 umask 077
 
-VERSION='1.0.6'
-BUILD='37'
-ZIP_URL='https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.6/Sinergium-Antiblock-1.0.6-macOS-universal.zip'
-ZIP_SHA256='b9c35aaacf18bbaafaba7c5281e48aa08e8ffe65529ce87d4eaf948afea89b69'
+VERSION='1.0.7'
+BUILD='38'
+ZIP_URL='https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.7/Sinergium-Antiblock-1.0.7-macOS-universal.zip'
+ZIP_SHA256='74c8fdc7b5d89abaa2d7febf1f83460873bb6f3a8ed08874f961caa898d3ee37'
 MIN_OS='14.0'
 TEAM_ID='LGH79DQVGP'
 APP_NAME='Клодздец.app'
