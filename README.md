@@ -4,10 +4,10 @@
 
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
-| macOS | macOS 14+, Apple Silicon и Intel | [1.0.6 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.6/Sinergium-Antiblock-1.0.6-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.6/Sinergium-Antiblock-1.0.6-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.6 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.6/Sinergium-Antiblock-1.0.6-Windows-x64-Portable.exe) |
+| macOS | macOS 14+, Apple Silicon и Intel | [1.0.7 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.7/Sinergium-Antiblock-1.0.7-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.7/Sinergium-Antiblock-1.0.7-macOS-universal.zip) |
+| Windows | Windows 10/11 x64 | [1.0.7 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.7/Sinergium-Antiblock-1.0.7-Windows-x64-Portable.exe) |
 
-В 1.0.6 сохранённые дни без скачков IP остаются видны после перезапуска и при ошибках проверки. До новых ответов показана статистика «по журналу» с датой. Mac перед установкой заново проверяет последнюю версию, чтобы не использовать устаревшее предложение промежуточного обновления.
+В 1.0.7 VPN-профили стали серой справочной строкой: их наличие, количество и доступность списка не снижают итоговую оценку. При остальных успешных проверках офисный IP получает 4+, резидентский и мобильный — 5. Проверки реального прокси, репутации IP и соединений Claude сохраняются.
 
 Сохранены мобильный Wireless как «Резидентский IP (мобильный)» с золотым кубком, независимая Net.Coffee, офисный IP со звездой и упрощённое меню. Геолокация и разрешения не запрашиваются; приложение не меняет настройки сети.
 
