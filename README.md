@@ -4,10 +4,10 @@
 
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
-| macOS | macOS 14+, Apple Silicon и Intel | [1.0.4 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.4/Sinergium-Antiblock-1.0.4-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.4/Sinergium-Antiblock-1.0.4-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.4 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.4/Sinergium-Antiblock-1.0.4-Windows-x64-Portable.exe) |
+| macOS | macOS 14+, Apple Silicon и Intel | [1.0.5 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.5/Sinergium-Antiblock-1.0.5-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.5/Sinergium-Antiblock-1.0.5-macOS-universal.zip) |
+| Windows | Windows 10/11 x64 | [1.0.5 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.5/Sinergium-Antiblock-1.0.5-Windows-x64-Portable.exe) |
 
-В версии 1.0.4 появились оценка конфигурации 1–5, независимая оценка Net.Coffee для IP Claude, офисный IP со звездой, упрощённое меню и статистика дней без скачков IP. Геолокация и разрешения не запрашиваются; приложение не меняет настройки сети.
+В версии 1.0.5 мобильный Wireless IP учитывается как резидентский: «Резидентский IP (мобильный)», золотой кубок и оценка до 5. Подпись «Резидентский IP» выделена жирным зелёным. Сохранены независимая Net.Coffee, офисный IP со звездой, упрощённое меню и статистика дней без скачков IP. Геолокация и разрешения не запрашиваются; приложение не меняет настройки сети.
 
 На Windows скачайте и запустите EXE. На Mac перенесите приложение из DMG в «Программы». Для проверки обновлений нажмите версию внизу меню; установка начинается по вашему действию. Каналы остаются прежними: `macos/stable` и `windows-portable-v3/stable`. Приложения получают только обновления своей платформы и проверяют криптографическую подпись перед установкой.
 
