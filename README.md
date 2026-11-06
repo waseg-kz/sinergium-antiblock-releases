@@ -4,10 +4,12 @@
 
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
-| macOS | macOS 14+, Apple Silicon и Intel | [1.0.8 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.8/Sinergium-Antiblock-1.0.8-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.8/Sinergium-Antiblock-1.0.8-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.8 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.8/Sinergium-Antiblock-1.0.8-Windows-x64-Portable.exe) |
+| macOS | macOS 14+, Apple Silicon и Intel | [1.0.9 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.9/Sinergium-Antiblock-1.0.9-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.9/Sinergium-Antiblock-1.0.9-macOS-universal.zip) |
+| Windows | Windows 10/11 x64 | [1.0.9 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.9/Sinergium-Antiblock-1.0.9-Windows-x64-Portable.exe) |
 
-В 1.0.8 после обновления требуется вход через Пачку Синергиум или персональный токен для этого компьютера. Код Пачки приходит в личное сообщение; токен выдаёт администратор. Журнал IP сохраняется, проверка обновлений доступна до входа.
+В 1.0.9 исправлено повторное открытие браузера при восстановлении проверки доступа после сна или временного обрыва сети. Ручная проверка доступна по кнопке. Из основного интерфейса убраны имя пользователя и кнопка «Выйти».
+
+Для доступа используется Пачка Синергиум или персональный токен для этого компьютера. Код Пачки приходит в личное сообщение; токен выдаёт администратор. Сохранённый вход и журнал IP остаются на месте, проверка обновлений доступна до входа.
 
 VPN-профили не снижают оценку: если они не найдены, строка зелёная; найденные или недоступные показаны серым. При остальных успешных проверках офисный IP получает 4+, резидентский и мобильный — 5.
 
