@@ -7,16 +7,16 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <description>Обновления Клодздец</description>
     <language>ru</language>
     <item>
-      <title>Клодздец 1.0.15</title>
-      <pubDate>Sat, 07 Nov 2026 13:42:39 GMT</pubDate>
-      <sparkle:version>45</sparkle:version>
-      <sparkle:shortVersionString>1.0.15</sparkle:shortVersionString>
+      <title>Клодздец 1.0.16</title>
+      <pubDate>Sat, 07 Nov 2026 14:47:06 GMT</pubDate>
+      <sparkle:version>46</sparkle:version>
+      <sparkle:shortVersionString>1.0.16</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description>Обновление приложения. Настройки и журнал IP сохраняются.</description>
-      <enclosure url="https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.15/Sinergium-Antiblock-1.0.15-macOS-universal.zip" sparkle:edSignature="xH7ktUTzSzj9SmraTf4/mm0fTOIX4cxgi3EObxi8PnjTyj4F7pT4FAmzyBze6upqOmYpwsUPtd8yaWEWxrlfDA==" length="4454954" type="application/octet-stream"></enclosure>
+      <enclosure url="https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.16/Sinergium-Antiblock-1.0.16-macOS-universal.zip" sparkle:edSignature="iV5Q9CCtpveE0uL2fE11Zmm9cidpvM84fc1Ve0oBRS4km23Er6IYNLeB4MmHKc6MjGVYwVN7dCFTrqDtLCkkAw==" length="4471666" type="application/octet-stream"></enclosure>
     </item>
   </channel>
 </rss><!-- sparkle-signatures:
-edSignature: vtEEYGCWzNtkjBKaVEHcdSQKbO/sRgHeUCFvpv4cTMeJYzeDp24fgeyx1TLBqI5yX0fyjv/pcxzQP2a0HApiDg==
+edSignature: c6XnwvdxR9IoksvKJc6iyfryQt6XNbyYex2hUUE3STKPU+4LPnshTwX0MQw4Xl50FYyhNXjf4+k/xBpFguUCCQ==
 length: 1424
 -->
