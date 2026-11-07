@@ -4,8 +4,10 @@
 
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
-| macOS | macOS 14+, Apple Silicon и Intel | [1.0.15 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.15/Sinergium-Antiblock-1.0.15-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.15/Sinergium-Antiblock-1.0.15-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.15 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.15/Sinergium-Antiblock-1.0.15-Windows-x64-Portable.exe) |
+| macOS | macOS 14+, Apple Silicon и Intel | [1.0.16 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.16/Sinergium-Antiblock-1.0.16-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.16/Sinergium-Antiblock-1.0.16-macOS-universal.zip) |
+| Windows | Windows 10/11 x64 | [1.0.16 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.16/Sinergium-Antiblock-1.0.16-Windows-x64-Portable.exe) |
+
+В 1.0.16 результаты в закрытую админку отправляются также при входе по персональному токену. Сохраняется совместимость с уже выданными токенами. Отправка выполняется каждый час, при запуске приложения, ручной проверке и подтверждённом изменении IP или страны выхода.
 
 В 1.0.15 приложение автоматически показывает найденную версию, загружает её и перезапускается через 30 секунд после готовности. На Mac текущую установку можно отложить кнопкой «Позже». Перед установкой проверяется подпись и сохраняется журнал. Для перехода с 1.0.14 и прежних версий один раз нажмите «Обновить сейчас». Последующие обновления будут устанавливаться автоматически.
 
