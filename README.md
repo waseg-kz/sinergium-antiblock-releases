@@ -5,9 +5,9 @@
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
 | macOS | macOS 14+, Apple Silicon и Intel | [1.0.12 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.12/Sinergium-Antiblock-1.0.12-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.12/Sinergium-Antiblock-1.0.12-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.9 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.9/Sinergium-Antiblock-1.0.9-Windows-x64-Portable.exe) |
+| Windows | Windows 10/11 x64 | [1.0.12 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.12/Sinergium-Antiblock-1.0.12-Windows-x64-Portable.exe) |
 
-В Mac 1.0.12 добавлен дневной снимок основного экрана для закрытой админки: администратор видит те же результаты проверки. Отправка работает через вход в Пачку Синергиум; история скачков IP и сырые соединения в снимок не входят. Сохранены промежуточные оценки **4−, 3− и 2−**. Опубликованная Windows пока остаётся на 1.0.9.
+В версии 1.0.12 для Mac и Windows добавлен дневной снимок основного экрана для закрытой админки. Администратор видит те же результаты проверки. При работе приложения отправка выполняется через вход в Пачку Синергиум. Снимок содержит текущие результаты проверки. Windows также получил промежуточные оценки **4−, 3− и 2−** и накопленные изменения интерфейса Mac.
 
 В 1.0.9 исправлено повторное открытие браузера при восстановлении проверки доступа после сна или временного обрыва сети. Ручная проверка доступна по кнопке. Из основного интерфейса убраны имя пользователя и кнопка «Выйти».
 
