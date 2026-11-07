@@ -4,8 +4,10 @@
 
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
-| macOS | macOS 14+, Apple Silicon и Intel | [1.0.14 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.14/Sinergium-Antiblock-1.0.14-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.14/Sinergium-Antiblock-1.0.14-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.14 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.14/Sinergium-Antiblock-1.0.14-Windows-x64-Portable.exe) |
+| macOS | macOS 14+, Apple Silicon и Intel | [1.0.15 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.15/Sinergium-Antiblock-1.0.15-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.15/Sinergium-Antiblock-1.0.15-macOS-universal.zip) |
+| Windows | Windows 10/11 x64 | [1.0.15 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.15/Sinergium-Antiblock-1.0.15-Windows-x64-Portable.exe) |
+
+В 1.0.15 приложение автоматически показывает найденную версию, загружает её и перезапускается через 30 секунд после готовности. На Mac текущую установку можно отложить кнопкой «Позже». Перед установкой проверяется подпись и сохраняется журнал. Для перехода с 1.0.14 и прежних версий один раз нажмите «Обновить сейчас». Последующие обновления будут устанавливаться автоматически.
 
 В 1.0.14 результат отправляется на сервер админки каждый час, при запуске приложения, ручной проверке и подтверждённом изменении IP или страны выхода. Удалена подпись о доступности результата администратору. Исправлены обработка входа и приём результатов, на Mac ограничен размер загружаемых ответов, Windows использует Electron 45.2.3. Сохранённые вход, результаты и журнал продолжают использоваться.
 
@@ -19,7 +21,7 @@ VPN-профили не снижают оценку: если они не най
 
 Сохранены мобильный Wireless как «Резидентский IP (мобильный)» с золотым кубком, независимая Net.Coffee, офисный IP со звездой и упрощённое меню. Геолокация и разрешения не запрашиваются; приложение не меняет настройки сети.
 
-На Windows скачайте и запустите EXE. На Mac перенесите приложение из DMG в «Программы». Для проверки обновлений нажмите версию внизу меню; установка начинается по вашему действию. Каналы остаются прежними: `macos/stable` и `windows-portable-v3/stable`. Приложения получают только обновления своей платформы и проверяют криптографическую подпись перед установкой.
+На Windows скачайте и запустите EXE. На Mac перенесите приложение из DMG в «Программы». Окно обновления появляется автоматически. Проверку также можно запустить нажатием на версию внизу меню. Каналы остаются прежними: `macos/stable` и `windows-portable-v3/stable`. Приложения получают только обновления своей платформы и проверяют криптографическую подпись перед установкой.
 
 Прежние версии Windows portable поколения v3 обновляются через приложение. Со старой линии v2 или NSIS требуется однократная ручная замена: завершите старое приложение через трей и запустите новый EXE. Журнал сохраняется.
 
