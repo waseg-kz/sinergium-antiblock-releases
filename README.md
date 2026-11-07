@@ -4,8 +4,10 @@
 
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
-| macOS | macOS 14+, Apple Silicon и Intel | [1.0.12 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.12/Sinergium-Antiblock-1.0.12-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.12/Sinergium-Antiblock-1.0.12-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.12 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.12/Sinergium-Antiblock-1.0.12-Windows-x64-Portable.exe) |
+| macOS | macOS 14+, Apple Silicon и Intel | [1.0.13 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.13/Sinergium-Antiblock-1.0.13-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.13/Sinergium-Antiblock-1.0.13-macOS-universal.zip) |
+| Windows | Windows 10/11 x64 | [1.0.13 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.13/Sinergium-Antiblock-1.0.13-Windows-x64-Portable.exe) |
+
+В 1.0.13 результаты отправляются непосредственно на сервер админки и появляются после приёма. Проверки приложений выполняются раз в сутки. Сохранённые вход, результаты и журнал продолжают использоваться.
 
 В версии 1.0.12 для Mac и Windows добавлен дневной снимок основного экрана для закрытой админки. Администратор видит те же результаты проверки. При работе приложения отправка выполняется через вход в Пачку Синергиум. Снимок содержит текущие результаты проверки. Windows также получил промежуточные оценки **4−, 3− и 2−** и накопленные изменения интерфейса Mac.
 
