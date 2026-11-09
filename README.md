@@ -5,7 +5,9 @@
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
 | macOS | macOS 14+, Apple Silicon и Intel | [1.0.16 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.16/Sinergium-Antiblock-1.0.16-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.16/Sinergium-Antiblock-1.0.16-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.16 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.16/Sinergium-Antiblock-1.0.16-Windows-x64-Portable.exe) |
+| Windows | Windows 10/11 x64 | [1.0.17 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.17/Sinergium-Antiblock-1.0.17-Windows-x64-Portable.exe) |
+
+В Windows 1.0.17 исправлен возврат на экран входа после правильного кода из Пачки. Приложение корректно сохраняет 30-дневную сессию и восстанавливает её после перезапуска. Обновление доступно через приложение, в том числе с экрана входа.
 
 В 1.0.16 результаты в закрытую админку отправляются также при входе по персональному токену. Сохраняется совместимость с уже выданными токенами. Отправка выполняется каждый час, при запуске приложения, ручной проверке и подтверждённом изменении IP или страны выхода.
 
