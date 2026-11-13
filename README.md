@@ -4,8 +4,10 @@
 
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
-| macOS | macOS 14+, Apple Silicon и Intel | [1.0.16 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.16/Sinergium-Antiblock-1.0.16-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.16/Sinergium-Antiblock-1.0.16-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.17 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.17/Sinergium-Antiblock-1.0.17-Windows-x64-Portable.exe) |
+| macOS | macOS 14+, Apple Silicon и Intel | [1.0.17 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.17/Sinergium-Antiblock-1.0.17-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.17/Sinergium-Antiblock-1.0.17-macOS-universal.zip) |
+| Windows | Windows 10/11 x64 | [1.0.18 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.18/Sinergium-Antiblock-1.0.18-Windows-x64-Portable.exe) |
+
+В Mac 1.0.17 и Windows 1.0.18 языковые теги `ru` и `kk` без региона принимаются без снижения оценки, если явно указанный регион `RU` отсутствует. В Windows 1.0.18 также исправлена ложная неполнота проверки соединений Claude при TCP-состояниях `Listen`, `Bound` и `Closed`.
 
 В Windows 1.0.17 исправлен возврат на экран входа после правильного кода из Пачки. Приложение корректно сохраняет 30-дневную сессию и восстанавливает её после перезапуска. Обновление доступно через приложение, в том числе с экрана входа.
 
