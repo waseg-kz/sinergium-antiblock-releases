@@ -4,10 +4,10 @@
 
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
-| macOS | macOS 14+, Apple Silicon и Intel | [1.0.19 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.19/Sinergium-Antiblock-1.0.19-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.19/Sinergium-Antiblock-1.0.19-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.19 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.19/Sinergium-Antiblock-1.0.19-Windows-x64-Portable.exe) |
+| macOS | macOS 14+, Apple Silicon и Intel | [1.0.20 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.20/Sinergium-Antiblock-1.0.20-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.20/Sinergium-Antiblock-1.0.20-macOS-universal.zip) |
+| Windows | Windows 10/11 x64 | [1.0.20 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.20/Sinergium-Antiblock-1.0.20-Windows-x64-Portable.exe) |
 
-В Mac и Windows 1.0.19 обновлена методика оценки. Подтверждённо выключенный Claude сохраняет баллы. Корректные языковые теги без региона, включая en, ru и kk, получают полный балл при отсутствии явно указанного RU. Цвет языковой строки согласован с расчётом.
+В Mac и Windows 1.0.20 скачком IP считается подтверждённая смена страны. Изменения адреса внутри страны сохраняются в журнале, а счётчик дней продолжает идти. Проверка обновлений выполняется при запуске и каждый час, включая переход с прежних настроек Mac.
 
 В Windows 1.0.17 исправлен возврат на экран входа после правильного кода из Пачки. Приложение корректно сохраняет 30-дневную сессию и восстанавливает её после перезапуска. Обновление доступно через приложение, в том числе с экрана входа.
 
