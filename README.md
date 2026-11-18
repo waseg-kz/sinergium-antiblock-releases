@@ -4,8 +4,10 @@
 
 | Платформа | Требования | Скачать |
 | --- | --- | --- |
-| macOS | macOS 14+, Apple Silicon и Intel | [1.0.20 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.20/Sinergium-Antiblock-1.0.20-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.20/Sinergium-Antiblock-1.0.20-macOS-universal.zip) |
-| Windows | Windows 10/11 x64 | [1.0.20 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.20/Sinergium-Antiblock-1.0.20-Windows-x64-Portable.exe) |
+| macOS | macOS 14+, Apple Silicon и Intel | [1.0.21 — DMG](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.21/Sinergium-Antiblock-1.0.21-macOS-universal.dmg) · [ZIP](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/macos/v1.0.21/Sinergium-Antiblock-1.0.21-macOS-universal.zip) |
+| Windows | Windows 10/11 x64 | [1.0.21 — portable EXE без установки](https://github.com/waseg-kz/sinergium-antiblock-releases/releases/download/windows-portable/v1.0.21/Sinergium-Antiblock-1.0.21-Windows-x64-Portable.exe) |
+
+В версии 1.0.21 для Mac и Windows оценка сохраняется, если за полные 15 секунд проверки у Claude не обнаружено соединений, даже когда приложение открыто. Разные внешние IP тоже сохраняют баллы, если сетевые источники и геобазы подтверждают одну страну выхода.
 
 В Mac и Windows 1.0.20 скачком IP считается подтверждённая смена страны. Изменения адреса внутри страны сохраняются в журнале, а счётчик дней продолжает идти. Проверка обновлений выполняется при запуске и каждый час, включая переход с прежних настроек Mac.
 
